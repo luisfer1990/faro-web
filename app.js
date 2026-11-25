@@ -26,8 +26,8 @@ const modules = {
   captura: {
     number: "03 / 08",
     title: "De la pantalla a una idea útil.",
-    description: "Recorta, extrae texto con OCR local, traduce texto o capturas y graba la pantalla con controles flotantes.",
-    points: ["Traducción en 15 idiomas, QR y cuentagotas de color", "Captura y grabación sin salir de tu flujo"],
+    description: "Recorta, extrae texto con OCR local y graba la pantalla con controles flotantes.",
+    points: ["Lectura de QR y cuentagotas de color", "Captura y grabación sin salir de tu flujo"],
     image: "img/modulo-captura.png",
     alt: "Herramientas de captura y OCR de Faro"
   },
@@ -35,7 +35,7 @@ const modules = {
     number: "04 / 08",
     title: "Un tiempo para avanzar. Otro para respirar.",
     description: "Organiza sesiones Pomodoro y descansos con el ritmo que mejor te funcione.",
-    points: ["Modo Suave o Estricto", "Bloqueo opcional de aplicaciones y sitios distractores"],
+    points: ["Temporizador Pomodoro", "Sesiones de trabajo y descansos"],
     image: "img/modulo-enfoque.png",
     alt: "Temporizador Pomodoro de Faro"
   },
