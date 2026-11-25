@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Faro es una isla flotante de productividad para Windows 10 y 11: música, capturas, enfoque, notas y mucho más, siempre a mano y sin estorbar.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Faro — Tu espacio, siempre a mano">
+  <meta property="og:description" content="Una isla flotante, ligera y adaptable para trabajar mejor en Windows.">
+  <meta property="og:url" content="https://luisfer1990.github.io/faro-web/">
+  <meta property="og:image" content="https://luisfer1990.github.io/faro-web/img/og-faro.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Faro, isla de productividad para Windows">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://luisfer1990.github.io/faro-web/">
+  <title>Faro — Tu espacio, siempre a mano</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/icono-faro.png">
+  <script>
+    (() => {
+      let theme;
+      try {
+        theme = localStorage.getItem("faro-theme");
+      } catch {
+        // El navegador puede bloquear el almacenamiento local.
+      }
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content =
+        theme === "dark" ? "#161e2e" : "#f7f6f2";
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Faro, ir al inicio">
+        <img src="img/icono-faro.png" alt="" class="brand-mark" width="37" height="37">
+        <span>Faro</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#funciones">Funciones</a>
+        <a href="#mascotas">Mascotas</a>
+        <a href="#privacidad">Privacidad</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Activar tema oscuro" title="Cambiar tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.7 15.7A9 9 0 0 1 8.3 3.3 9 9 0 1 0 20.7 15.7Z"/></svg>
+        </button>
+        <a class="header-download" href="#descargar">Descargar Faro</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero section" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-label">Isla de productividad para Windows 10 y 11</p>
+          <h1 id="hero-title">Tu espacio, <span>siempre a mano.</span></h1>
+          <p class="hero-lead">Faro reúne lo que necesitas en una isla flotante que se adapta a tu trabajo. Música, capturas, enfoque y pequeños recordatorios, a un gesto de distancia.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#descargar">Descargar Faro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="button button-text" href="#funciones">Explorar funciones</a>
+          </div>
+          <p class="hero-note">Disponible en español e inglés</p>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-topline"><span>Así se ve Faro en tu escritorio</span><span class="visual-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <figure class="image-slot hero-image" data-image="img/hero-isla.png" aria-label="Captura principal de Faro">
+            <div class="image-fallback"><span class="placeholder-glyph" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="17" width="56" height="45" rx="7"/><path d="M12 49 27 36l11 10 9-7 21 18M53 29h.1"/></svg></span><span>Tu captura principal aquí</span><code>img/hero-isla.png</code></div>
+          </figure>
+          <div class="visual-caption"><span>Una isla. Muchas maneras de trabajar.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="Características principales">
+      <div class="container strip-inner">
+        <p><strong>Una presencia discreta.</strong> Cápsula o notch, claro u oscuro: Faro se acomoda a ti.</p>
+        <div class="strip-tags"><span>Modo Fantasma</span><span>Tablero 2 × 2</span><span>Comandos locales</span></div>
+      </div>
+    </section>
+
+    <section class="section modules-section" id="funciones" aria-labelledby="modules-title">
+      <div class="container">
+        <div class="section-heading"><div><h2 id="modules-title">Todo lo que necesitas, justo cuando lo necesitas.</h2><p>Explora los módulos de Faro. Cada uno vive en la isla y aparece cuando lo llamas.</p></div><span class="section-aside">Ocho módulos, un mismo espacio</span></div>
+        <div class="module-shell">
+          <div class="module-tabs" role="tablist" aria-label="Módulos de Faro">
+            <button class="module-tab" id="tab-musica" role="tab" aria-selected="true" aria-controls="module-panel" tabindex="0" data-module="musica">Música y letras</button>
+            <button class="module-tab" id="tab-conversor" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="conversor">Conversor</button>
+            <button class="module-tab" id="tab-captura" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="captura">Captura y OCR</button>
+            <button class="module-tab" id="tab-enfoque" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="enfoque">Enfoque</button>
+            <button class="module-tab" id="tab-agua" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="agua">Agua</button>
+            <button class="module-tab" id="tab-portapapeles" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="portapapeles">Portapapeles</button>
+            <button class="module-tab" id="tab-notas" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="notas">Notas y tiempo</button>
+            <button class="module-tab" id="tab-sistema" role="tab" aria-selected="false" aria-controls="module-panel" tabindex="-1" data-module="sistema">Sistema</button>
+          </div>
+          <div class="module-panel" id="module-panel" role="tabpanel" aria-labelledby="tab-musica" tabindex="0">
+            <div class="module-copy"><p class="module-count" id="module-count">01 / 08</p><h3 id="module-title">Tu música también tiene su lugar.</h3><p id="module-description">Controla lo que escuchas sin cambiar de ventana. Sigue la letra sincronizada y deja que el visualizador acompañe el ritmo.</p><ul id="module-points"><li>Spotify, Apple Music, YouTube Music y reproductores locales</li><li>Letras sincronizadas y visualizador en tiempo real</li></ul></div>
+            <figure class="image-slot module-image" data-image="img/modulo-musica.png" aria-label="Captura del módulo Música y Letras"><div class="image-fallback"><span class="placeholder-glyph" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="17" width="56" height="45" rx="7"/><path d="M12 49 27 36l11 10 9-7 21 18M53 29h.1"/></svg></span><span>Captura del módulo</span><code>img/modulo-musica.png</code></div></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section command-section" aria-labelledby="command-title">
+      <div class="container command-inner"><div><h2 id="command-title">Pídelo, sin perder el hilo.</h2><p>Abre la barra de comandos local con <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd>. Busca acciones, resuelve cálculos o escribe un recordatorio como lo dirías normalmente.</p></div><div class="command-demo" aria-label="Ejemplo de la barra de comandos"><div class="command-top"><span class="command-search-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 4.5 4.5"/></svg></span><span>recordar llamar a mamá a las 15:00</span><kbd>↵</kbd></div><div class="command-result"><span class="result-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M8 3v4m8-4v4M4 10h16"/></svg></span><span><strong>Crear recordatorio</strong><small>Hoy · 15:00</small></span></div></div></div>
+    </section>
+
+    <section class="section pets-section" id="mascotas" aria-labelledby="pets-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2 id="pets-title">Mascotas que te acompañan.</h2>
+            <p>Elige entre 19 mascotas chibi que reaccionan a tu música, tus pausas, el agua y tus avisos. A veces hasta salen a pasear fuera de la isla.</p>
+          </div>
+        </div>
+        <div class="pet-gallery" role="group" aria-label="Vista previa de las mascotas de Faro">
+          <figure class="pet-tile image-slot" data-image="img/mascotas/mascota-01.png" data-alt="Mascota de Faro">
+            <div class="image-fallback"><span class="pet-silhouette" aria-hidden="true"></span><code>img/mascotas/mascota-01.png</code></div>
+          </figure>
+          <figure class="pet-tile image-slot" data-image="img/mascotas/mascota-02.png" data-alt="Mascota de Faro">
+            <div class="image-fallback"><span class="pet-silhouette" aria-hidden="true"></span><code>img/mascotas/mascota-02.png</code></div>
+          </figure>
+          <figure class="pet-tile image-slot" data-image="img/mascotas/mascota-03.png" data-alt="Mascota de Faro">
+            <div class="image-fallback"><span class="pet-silhouette" aria-hidden="true"></span><code>img/mascotas/mascota-03.png</code></div>
+          </figure>
+          <figure class="pet-tile image-slot" data-image="img/mascotas/mascota-04.png" data-alt="Mascota de Faro">
+            <div class="image-fallback"><span class="pet-silhouette" aria-hidden="true"></span><code>img/mascotas/mascota-04.png</code></div>
+          </figure>
+          <figure class="pet-tile image-slot" data-image="img/mascotas/mascota-05.png" data-alt="Mascota de Faro">
+            <div class="image-fallback"><span class="pet-silhouette" aria-hidden="true"></span><code>img/mascotas/mascota-05.png</code></div>
+          </figure>
+        </div>
+        <p class="gallery-note">y muchas más dentro de la app</p>
+      </div>
+    </section>
+
+    <section class="section privacy-section" id="privacidad" aria-labelledby="privacy-title"><div class="container privacy-grid"><div class="privacy-copy"><h2 id="privacy-title">Presente cuando lo necesitas. Invisible cuando no.</h2><p>En Modo Fantasma, Faro se vuelve translúcida y deja pasar los clics a las ventanas de atrás. Las notificaciones siguen siendo legibles para que no pierdas lo importante.</p><div class="privacy-rule"></div><h3>Tu espacio sigue siendo tuyo.</h3><p>Conversiones, capturas y OCR se procesan en tu equipo. El envío rápido al móvil usa tu misma red Wi-Fi, sin subir archivos a la nube. Algunas funciones opcionales, como letras, clima o traducción, pueden necesitar conexión.</p><a class="inline-link" href="#preguntas">Cómo funciona la privacidad</a></div><div class="privacy-visual"><figure class="image-slot ghost-image" data-image="img/modo-fantasma.png" aria-label="Captura del Modo Fantasma"><div class="image-fallback"><span class="placeholder-glyph" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="17" width="56" height="45" rx="7"/><path d="M12 49 27 36l11 10 9-7 21 18M53 29h.1"/></svg></span><span>Faro en Modo Fantasma</span><code>img/modo-fantasma.png</code></div></figure><div class="privacy-visual-foot"><span>Menos interrupciones</span><span>Más espacio para ti</span></div></div></div></section>
+
+    <section class="section faq-section" id="preguntas" aria-labelledby="faq-title"><div class="container faq-grid"><div><h2 id="faq-title">Lo que quizá quieras saber.</h2><p>Respuestas breves antes de hacerle sitio a Faro en tu escritorio.</p></div><div class="faq-list"><details><summary>¿En qué versiones de Windows funciona?</summary><p>Faro está disponible para Windows 10 y Windows 11.</p></details><details><summary>¿Puedo elegir la forma y el aspecto de la isla?</summary><p>Sí. Puedes usar el modo cápsula o notch, elegir tema Claro u Oscuro, personalizar el tablero 2 × 2 y fijar las pestañas que más usas.</p></details><details><summary>¿Mis archivos se suben a internet?</summary><p>La conversión de archivos, las capturas y el OCR se procesan localmente. Al enviar un archivo al móvil por QR, la transferencia se hace en la misma red Wi-Fi. Letras, clima o traducción pueden usar servicios externos cuando activas esas funciones.</p></details><details><summary>¿Cómo abro la barra de comandos?</summary><p>Presiona <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>K</kbd>. También puedes usar <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd> para pegar texto sin formato.</p></details><details><summary>¿Está disponible en español e inglés?</summary><p>Sí. Faro incluye ambos idiomas.</p></details></div></div></section>
+
+    <section class="section download-section" id="descargar" aria-labelledby="download-title">
+      <div class="container download-inner">
+        <div>
+          <h2 id="download-title">Hazle un lugar a Faro.</h2>
+          <p>Para Windows 10 y 11. Elige la forma de descarga que prefieras.</p>
+        </div>
+        <div class="download-options">
+          <!-- Cuando se publique Faro, sustituye el botón de la Store por la insignia oficial de Microsoft usando el Store ID: https://developer.microsoft.com/store/badges -->
+          <a class="button button-light pending-link" id="store-link" href="#descargar" data-pending="Microsoft Store">Microsoft Store</a>
+          <a class="button button-outline pending-link" id="direct-link" href="#descargar" data-pending="descarga directa">Descarga directa</a>
+        </div>
+        <p class="download-note" id="download-note">Los enlaces de descarga se activarán cuando estén publicados.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#inicio" aria-label="Faro, volver al inicio">
+        <img src="img/icono-faro.png" alt="" class="brand-mark" width="30" height="30">
+        <span>Faro</span>
+      </a>
+      <p>Tu espacio, siempre a mano.</p>
+      <nav aria-label="Enlaces del pie de página">
+        <a href="#funciones">Funciones</a>
+        <a class="pending-link" id="privacy-link" href="privacy.html" data-pending="Política de Privacidad">Política de Privacidad</a>
+      </nav>
+      <small>© <span id="year">2026</span> Faro · FerchoLabs</small>
+    </div>
+  </footer>
+  <div class="toast" id="link-toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

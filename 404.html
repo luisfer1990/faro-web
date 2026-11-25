@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="robots" content="noindex">
+  <title>Página no encontrada — Faro</title>
+  <script>
+    (() => {
+      let theme;
+      try {
+        theme = localStorage.getItem("faro-theme");
+      } catch {
+        // El navegador puede bloquear el almacenamiento local.
+      }
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content =
+        theme === "dark" ? "#161e2e" : "#f7f6f2";
+    })();
+  </script>
+  <script>
+    // GitHub Pages sirve esta página en la URL que falló, aunque esté en una ruta profunda.
+    if (location.protocol === "https:" || location.protocol === "http:") {
+      const projectRoot = "/faro-web/";
+      const base = document.createElement("base");
+      base.href = location.pathname === "/faro-web" || location.pathname.startsWith(projectRoot)
+        ? projectRoot
+        : "/";
+      document.head.append(base);
+    }
+  </script>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/icono-faro.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="not-found container">
+    <img class="not-found-icon" src="img/icono-faro.png" alt="" width="72" height="72">
+    <h1>Esta página no existe</h1>
+    <a class="button button-primary" href="./">Volver al inicio</a>
+  </main>
+</body>
+</html>
